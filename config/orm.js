@@ -15,10 +15,14 @@ const orm = {
     }
     
     // Function to insert into burgers
+    // How to insert burger_name & devoured?
     insertOne: function (callback) {
-        connection.query('INSERT INTO burgers SET ?', )
+        connection.query('INSERT INTO burgers SET ?', function (error, result) {
+            if (error) throw error;
+            callback(result);
+        });
     }
     
-    
-    updateOne()
+    // Function to update data in burgers
+    updateOne: ()
 }
