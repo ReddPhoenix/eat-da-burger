@@ -7,7 +7,7 @@ const connection = require('../config/connection');
 const orm = {
 
     // Function to return all from burgers
-    selectAll: function(callback) {
+    selectAll: function (callback) {
         connection.query('SELECT * FROM burgers', function (error, result) {
             if (error) throw error;
             callback(result);
@@ -24,5 +24,14 @@ const orm = {
     }
     
     // Function to update data in burgers
-    updateOne: ()
-}
+    // How to update into burgers?
+    updateOne: function (callback) {
+        connection.query('UPDATE burgers SET ? WHERE ?', function (error, result) {
+            if (error) throw error;
+            callback(result);
+        });
+    }
+};
+
+// Export the ORM object in module.exports
+module.exports = orm;
