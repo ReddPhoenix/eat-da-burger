@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 // Route to access burgers_controller.js
-app.use('/', require('./controllers/burgers_controller.js'));
+app.use('/', require('./controllers/burgers_controller'));
 
 //  Added listener for assigned PORT for server
 app.listen(PORT, () => {
