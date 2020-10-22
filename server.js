@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+// Route to access burgers_controller.js
+app.use('/', require('./controllers/burgers_controller.js'));
+
 //  Added listener for assigned PORT for server
 app.listen(PORT, () => {
     console.log("App running on PORT " + PORT);
