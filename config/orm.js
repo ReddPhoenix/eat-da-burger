@@ -7,30 +7,33 @@ const connection = require('../config/connection');
 const orm = {
 
     // Function to return all from burgers
-    selectAll: function (callback) {
-        connection.query('SELECT * FROM burgers', function (error, result) {
-            if (error) throw error;
-            callback(result);
-        });
-    }
+    selectAll: (callback) => {
+        connection.query('SELECT * FROM burgers', (error, result) => {
+                if (error)
+                    throw error;
+                callback(result);
+            });
+    },
     
     // Function to insert into burgers
-    // How to insert burger_name & devoured?
-    insertOne: function (callback) {
-        connection.query('INSERT INTO burgers SET ?', function (error, result) {
-            if (error) throw error;
-            callback(result);
-        });
-    }
+    insertOne: (burger_name, callback) => {
+        connection.query('INSERT INTO burgers SET ?', { burger_name: burger_name, devoured: false }, (error, result) => {
+                if (error)
+                    throw error;
+                callback(result);
+            });
+    },
     
     // Function to update data in burgers
-    // How to update into burgers?
-    updateOne: function (callback) {
-        connection.query('UPDATE burgers SET ? WHERE ?', function (error, result) {
-            if (error) throw error;
-            callback(result);
-        });
+    updateOne: (idBurger, callback) => {
+        connection.query('UPDATE burgers SET ? WHERE ?', [{ devoured: true }, { id: idBurger }], (error, result) => {
+                if (error)
+                    throw error;
+                callback(result);
+            });
+
     }
+
 };
 
 // Export the ORM object in module.exports
