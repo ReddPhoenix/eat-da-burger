@@ -6,15 +6,29 @@ const orm = require('../config/orm');
 
 const burger = {
     // selectAll Function
-    // How to use functions?
-    
+
+    selectAll: (callback) => {
+        orm.selectAll((res) => {
+            callback(res);
+        });
+    },
+
     // insertOne Function
-    // How to use functions?
+
+    insertOne: (burger_name, callback) => {
+        orm.insertOne(burger_name, (res) => {
+            callback(res);
+        });
+    },
 
     // updateOne Function
-    // How to use functions?
 
+    updateOne: (idBurger, callback) => {
+        orm.updateOne(idBurger, (res) => {
+            callback(res);
+        });
     }
+};
 
 // Export in module.exports
 module.exports = burger;

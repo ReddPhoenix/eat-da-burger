@@ -25,3 +25,6 @@ if (process.env.JAWSDB_URL) {
 connection.connect(function (error) {
     if (error) throw error;
 });
+
+// Export in module.exports
+module.exports = connection;
