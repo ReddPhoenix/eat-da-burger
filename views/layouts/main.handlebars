@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Da Burger!</title>
     <link rel="stylesheet" href="../../public/assets/css/burger_style.css">
+    {{!-- Bulma & Fonts --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    {{!-- <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Faster+One&family=Fontdiner+Swanky&family=Mystery+Quest&family=Open+Sans&family=Shadows+Into+Light+Two&family=Source+Sans+Pro&family=Zilla+Slab+Highlight&display=swap" rel="stylesheet"> --}}
 </head>
-<body>
+
+<body id="body" class="img-container">
+
+    <header>
+        <!-- Title Header -->
+        <div>
+            <div class="inner-container has-text-centered is-hero">
+                <!-- Title & Subtitle -->
+                <h1>Eat Da Burger!</h1>
+                <h3> Devour any burger you can get your hands on!</h3>
+
+
+
+                <!-- Search entry & button -->
+                <section id="search" class="has-text-centered">
+                    <!-- Search entry -->
+                    <input id="search-movie-title" type="text" class="inputValue" placeholder="Enter a burger name">
+                    <!-- Search button -->
+                    <input id="search-btn" type="submit" value="Submit" class="button">
+                </section>
+            </div>
+        </div>
+    </header>
+
     {{{ body }}}
 </body>
+
 </html>

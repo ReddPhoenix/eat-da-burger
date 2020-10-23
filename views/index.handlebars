@@ -1,5 +1,42 @@
-<h1>Eat Da Burger</h1>
+<div id="columns" class="tile is-ancestor">
+
+    {{!-- Burgers to be devoured --}}
+    <div class="tile is-parent is-vertical is-5">
+        <article id="book-result" class="tile is-child notification is-primary is-bold is-dark headline">
+            <h2>Burgers to be Devoured</h2>
+
+            {{#each burgers}}
+            {{#unless devoured}}
+            <form action="burger/eat/{{id}}" method="POST">
+                <div class="input-group">
+                    <li class="form-control"> {{id}}. {{burger_name}}</li>
+                    <span class="input-group-btn">
+                        <button class="btn-default is-centered" type="submit">Devour Burger!</button>
+                    </span>
+                </div>
+            </form>
+            {{/unless}}
+            {{/each}}
+        </article>
+    </div>
+    
+    {{!-- Burgers devoured --}}
+    <div class="tile is-parent is-vertical is-5">
+        <article id="book-result" class="tile is-child notification is-secondary is-bold is-dark headline">
+            <h2>Burgers Devoured</h2>
+
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <form action="burger/eat/{{id}}" method="POST">
+                <div class="input-group">
+                    <li class="form-control"> {{this.id}}. {{this.burger_name}}</li>
+                </div>
+            </form>
+            {{/if}}
+            {{/each}}
+        </article>
+    </div>
 
 
-{{!-- Button to submit user input into the database  --}}
-<button class="btn-default" type="submit">Submit</button>
+</div>
+
