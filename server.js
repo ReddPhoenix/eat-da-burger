@@ -5,6 +5,12 @@ const exphbs = require('express-handlebars');
 // Express assigned to app variable
 const app = express();
 
+// Set up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: false }));
+
+// app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
 // Variable assigned to PORT for server
 const PORT = process.env.PORT || 3000;
 

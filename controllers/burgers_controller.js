@@ -10,6 +10,7 @@ const router = express.Router();
 
 // GET, POST, PUT routes
 router.get('/', (req, res) => {
+    console.log("================= hit ============")
     burger.selectAll((data) => {
         res.render('index', { burgers: data });
     });

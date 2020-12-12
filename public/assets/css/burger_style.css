@@ -1,3 +1,13 @@
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline flow-root list-item;
+    position: relative;
+}
+
+
+
+
 /* CSS Stylesheet */
 
  /* CSS Stylesheet from previous project for reference */
@@ -6,8 +16,8 @@
 /* All elements selected */
 * {
     margin: 0;
-    /* height: 100%; */
-}
+    height: 50%; 
+ } 
 
 /* Width of body */
 body {
@@ -29,7 +39,7 @@ body {
 /* Site title & subtitle */
 .inner-container {
     text-align: center;
-    /* position: absolute; */
+    font-size: 25px;
     width: 100%;
     color: rgb(246, 204, 18);
     height: auto;
@@ -38,7 +48,7 @@ body {
 
 /* Title */
 h1 {
-    font-size: 7em;
+    font-size: 60px;
     font-family: "Shadows into Light Two", sans-serif;
     font-weight: 900;
     text-decoration-line: underline;
@@ -50,7 +60,7 @@ h1 {
 h2 {
     margin-top: -17px;
     font-family: "Fontdiner Swanky", sans-serif;
-    font-size: 1.7em;
+    /* font-size: 1.7em; */
     text-align: center;
     font-weight: 400;
 }
@@ -60,32 +70,7 @@ h2 {
     text-align: center;
 }
 
-/* Screen size property adjustments */
-@media only screen and (max-width: 920px) {
-    .inner-container {
-        margin-top: 75px;
-    }
-}
 
-/* Screen size property adjustments */
-@media only screen and (max-width: 540px) {
-    .inner-container {
-        margin-top: 10px;
-    }
-    
-    h1 {
-        font-size: 5em;
-    }
-    
-    h2 {
-        font-size: 1.4em;
-    }
-}
-
-/* Container content justified to center */
-#columns, #rating-container {
-    justify-content: center;
-}
 
 
 /* Used to match the HTML element before background picture was assigned */
@@ -117,12 +102,12 @@ h1.title, .subtitle {
     color: yellow;
 }
 
-/* Search container space added below */
+/* Burger container space added below */
 #search {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
-/* Search Input */
+/* Burger Input */
 input[type="text"] {
     height: 40px;
     width: auto;
@@ -136,7 +121,7 @@ input[type="text"] {
     border-color: rgb(67, 119, 121);
 }
 
-/* Search Submit button */
+/*  Submit button */
 input[type="submit"] {
     height: 40px;
     width: auto;
@@ -151,69 +136,3 @@ input[type="submit"] {
     border-color: rgb(67, 119, 121);
 }
 
-/* Background image assigned to Book Result */
-#book-result {
-    background-image: url(../assets/jaredd-craig-HH4WBGNyltc-unsplash.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Background image assigned to Movie Result */
-#movie-result {
-    background-image: url(../assets/denise-jans-WevidclYpdc-unsplash.jpg);
-    height: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Background image assigned to Comparison rating */
-#comparison-rating {
-    background-image: url(../assets/de-andre-bush-eoohqHDVEP0-unsplash.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Textbox background to allow text to be more readable and provide opacity to the textbox to see background image */
-.transbox {
-    margin: 10px;
-    /* Changed background to rgba to allow opacity on the background image and not text as well */
-    background: rgba(233, 221, 218, 0.863);
-    border: 1px solid black;
-    padding: 0 0 0 5;
-    border-radius: 5px;
-
-}
-
-/* Chicle font & size applied to Comparison Rating. Added padding to prevent 'p' & 'g' from extending past the margin  */
-#compare {
-    font-family: "Chicle";
-    font-size: 60px;
-    font-style: oblique;
-    padding: 0 0 5px 0;
-}
-
-/* Chicle font & size applied to tiles */
-#rating, #book-result, #movie-result {
-    font-family: "Chicle";
-    font-size: 40px;
-    font-style: oblique;
-}
-
-/* Added border for tile clarity from background image */
-#comparison-rating, #book-result, #movie-result {
-    border: 2px solid rgb(230, 219, 203);
-}
-
-/* Set book cover and movie poster to a standard size for both images*/
-#book-cover, #movie-poster {
-    height: 225px;
-    width: 150px;
-}

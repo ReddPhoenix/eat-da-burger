@@ -2,9 +2,9 @@
 
     {{!-- Burgers to be devoured --}}
     <div class="tile is-parent is-vertical is-5">
-        <article id="book-result" class="tile is-child notification is-primary is-bold is-dark headline">
+        <article id="book-result" class="tile is-child notification is-primary is-bold is-dark headline has-text-centered">
             <h2>Burgers to be Devoured</h2>
-
+            
             {{#each burgers}}
             {{#unless devoured}}
             <form action="burger/eat/{{id}}" method="POST">
@@ -17,12 +17,13 @@
             </form>
             {{/unless}}
             {{/each}}
+           
         </article>
     </div>
     
     {{!-- Burgers devoured --}}
     <div class="tile is-parent is-vertical is-5">
-        <article id="book-result" class="tile is-child notification is-secondary is-bold is-dark headline">
+        <article id="book-result" class="tile is-child notification is-secondary is-bold is-dark headline has-text-centered">
             <h2>Burgers Devoured</h2>
 
             {{#each burgers}}

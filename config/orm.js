@@ -10,7 +10,7 @@ const orm = {
     selectAll: (callback) => {
         connection.query('SELECT * FROM burgers', (error, result) => {
                 if (error) throw error;
-                callback(result);
+                callback(result); 
             });
     },
     
