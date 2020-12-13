@@ -1,28 +1,33 @@
 // Setup code to connect Node to MySQL
-
 const mysql = require("mysql");
 
 require('dotenv').config();
 
-var connection;
+let connection;
 
-if (process.env.JAWSDB_URL) {
-    // use jaws db
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
+// if (process.env.JAWSDB_URL) {
+//     // use jaws db
+//     console.log('==========hit===connection.js==top');
+//     console.log(JAWSDB_URL);
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// }
+// else {
     // use local connection
     // Connection to mysql
+    console.log('==hit==connection.js==mysql')
     connection = mysql.createConnection({
         host: "localhost",
         port: 3306,
         user: "root",
         password: process.env.DB_PASS,
-        database: "burgers_db",
+        
+        database: "burgers_db"
     });
-}
+// }
 
 
 connection.connect(function (error) {
+    console.log('====hit===connection.js===')
     if (error) throw error;
 });
 

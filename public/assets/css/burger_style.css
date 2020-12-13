@@ -1,3 +1,12 @@
+/* CSS Stylesheet */
+
+
+/* All elements selected */
+body {
+    background-color: red;
+}
+
+/* Hamburger image */
 .image {
     margin-left: auto;
     margin-right: auto;
@@ -6,44 +15,13 @@
 }
 
 
-
-
-/* CSS Stylesheet */
-
- /* CSS Stylesheet from previous project for reference */
-
-
-/* All elements selected */
-* {
-    margin: 0;
-    height: 50%; 
- } 
-
-/* Width of body */
-body {
-    width: 100%;
-   
-}
-
-/* Background image */
-.img-container {
-    background: red;
-    height: 140vh;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-}
-
 /* Site title & subtitle */
 .inner-container {
     text-align: center;
     font-size: 25px;
-    width: 100%;
+    width: auto;
     color: rgb(246, 204, 18);
-    height: auto;
-    margin-top: 900 px;
+
 }
 
 /* Title */
@@ -60,17 +38,28 @@ h1 {
 h2 {
     margin-top: -17px;
     font-family: "Fontdiner Swanky", sans-serif;
-    /* font-size: 1.7em; */
     text-align: center;
     font-weight: 400;
+    text-decoration-line: underline;
+}
+
+.burger {
+    font-weight: 500;
+    position: absolute;
 }
 
 /* Text alignment for tiles */
 .headline {
     text-align: center;
+
 }
 
+.tile {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0;
 
+}
 
 
 /* Used to match the HTML element before background picture was assigned */
@@ -93,7 +82,8 @@ p {
 }
 
 /* Main title & subtitle color assignment */
-h1.title, .subtitle {
+h1.title,
+.subtitle {
     color: yellow;
 }
 
@@ -102,13 +92,8 @@ h1.title, .subtitle {
     color: yellow;
 }
 
-/* Burger container space added below */
-#search {
-    margin-bottom: 50px;
-}
-
 /* Burger Input */
-input[type="text"] {
+.form-control[type="text"] {
     height: 40px;
     width: auto;
     background: white;
@@ -117,16 +102,16 @@ input[type="text"] {
     font-size: 20px;
     border: solid;
     border-radius: 50px;
-    padding: 10px 10px;
+    padding: 10px;
     border-color: rgb(67, 119, 121);
 }
 
 /*  Submit button */
-input[type="submit"] {
-    height: 40px;
+#search-btn {
+    height: auto;
     width: auto;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     background: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
@@ -136,3 +121,19 @@ input[type="submit"] {
     border-color: rgb(67, 119, 121);
 }
 
+#search-btn-1 {
+    height: auto;
+    width: auto;
+    margin-bottom: 2rem;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    border: solid;
+    border-radius: 50px;
+    border-color: rgb(67, 119, 121);
+}
+
+#book-result.tile {
+    display: table-cell;
+}

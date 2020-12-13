@@ -2,37 +2,37 @@ const express = require('express');
 const burger = require('../models/burger');
 const router = express.Router();
 
-// Express assigned to app variable
-// const app = express();
+//  ROUTES
 
-// Variable assigned to PORT for server
-// const PORT = process.env.PORT || 3000;
-
-// GET, POST, PUT routes
 router.get('/', (req, res) => {
-    console.log("================= hit ============")
+    console.log('==hit==burger_controllers.js===/')
+        res.redirect('/index');
+    });
+
+router.get('/index', (req, res) => {
     burger.selectAll((data) => {
-        res.render('index', { burgers: data });
+        console.log('==hit==burger_controllers.js===index')
+        let hbsObject = { burgers: data };
+        res.render('index', hbsObject);
     });
 });
 
-router.post('/burgers', (req, res) => {
-    burger.insertOne(['burger_name'], [req.body.burger_name], data => {
-        res.redirect('/');
+//create Burger
+router.post('/burger/create', (req, res) => {
+    console.log('==hit==burger_controllers.js===create burger')
+    burger.insertOne(req.body.burger_name, () => {
+        res.redirect('/index');
     });
 });
 
-// router.put('burgers/:id', (req, req) => {
-router.put('burgers/:id', (data) => {
-    burger.updateOne({ devoured: true }, 'id = ' + req.params.id, (data) => {
-        res.redirect('/');
+//eat burger
+router.post('/burger/eat/:id', (req, res) => {
+    console.log('==hit==burger_controllers.js===eat burger')
+        burger.updateOne(req.params.id, () => {
+                res.redirect('/index');
+            });
     });
-})
 
-//  Added listener for assigned PORT for server
-// app.listen(PORT, () => {
-//     console.log("App running on PORT " + PORT);
-// });
 
 
 // Export in module.exports

@@ -1,6 +1,5 @@
 // Import (require) connection.js into orm.js
-
-const connection = require('../config/connection');
+const connection = require('./connection');
 
 
 // Methods to retrieve and store data in database

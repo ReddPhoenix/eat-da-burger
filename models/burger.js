@@ -23,8 +23,8 @@ const burger = {
 
     // updateOne Function
 
-    updateOne: (idBurger, callback) => {
-        orm.updateOne(idBurger, (res) => {
+    updateOne: (burger_id, callback) => {
+        orm.updateOne(burger_id, (res) => {
             callback(res);
         });
     }

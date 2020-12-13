@@ -21,22 +21,34 @@
         <!-- Title Header -->
         <div>
             <div class="inner-container has-text-centered is-hero">
-                <!-- Title & Subtitle -->
+
                 <h1 class="is-larger">Eat Da Burger!</h1>
-                <h3> Devour any burger you can get your hands on!</h3>
+                Devour any burger you can get your hands on!
                 <figure class="image is-128x128 " id="burgerImg">
                     <img src="/assets/img/cheeseburger-clipart.png" alt="burger">
                 </figure>
 
 
-                <!-- Search entry & button -->
-                <section id="search" class="has-text-centered">
-                    <!-- Search entry -->
-                    <input id="search-movie-title" type="text" class="inputValue" placeholder="Enter a burger name">
-                    <!-- Search button -->
-                    <input id="search-btn" type="submit" value="Submit" class="button">
-                </section>
+                <form action="burger/create" method="POST">
+
+                    <!-- Burger Input Box -->
+                    <div class="form-group">
+
+                        <input class="form-control has-text-centered" type="text"
+                            id="new_burger required value="" name="burger_name"
+                            placeholder='Enter a burger to create'></textarea>
+                    </div>
+
+                    <br>
+
+                    <!-- Submit Button -->
+                    <center>
+                        <button id="search-btn-1" type="submit" class="button">Assemble my Burger!</button>
+                    </center>
+
+                </form>
             </div>
+
         </div>
     </header>
 
