@@ -5,13 +5,12 @@ require('dotenv').config();
 
 let connection;
 
-// if (process.env.JAWSDB_URL) {
-//     // use jaws db
-//     console.log('==========hit===connection.js==top');
-//     console.log(JAWSDB_URL);
-//     connection = mysql.createConnection(process.env.JAWSDB_URL);
-// }
-// else {
+if (process.env.JAWSDB_URL) {
+    // use jaws db
+    console.log('==========hit===connection.js==top');
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else {
     // use local connection
     // Connection to mysql
     console.log('==hit==connection.js==mysql')
@@ -20,10 +19,10 @@ let connection;
         port: 3306,
         user: "root",
         password: process.env.DB_PASS,
-        
+
         database: "burgers_db"
     });
-// }
+}
 
 
 connection.connect(function (error) {
