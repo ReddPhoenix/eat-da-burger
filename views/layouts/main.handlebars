@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Eat Da Burger!</title>
     <link rel="stylesheet" href="/assets/css/burger_style.css">
     {{!-- Bulma & Fonts --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+     {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> --}}
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Chicle&family=Faster+One&family=Fontdiner+Swanky&family=Mystery+Quest&family=Open+Sans&family=Shadows+Into+Light+Two&family=Source+Sans+Pro&family=Zilla+Slab+Highlight&display=swap"
@@ -34,9 +36,8 @@
                     <!-- Burger Input Box -->
                     <div class="form-group">
 
-                        <input class="form-control has-text-centered" type="text"
-                            id="new_burger required value="" name="burger_name"
-                            placeholder='Enter a burger to create'></textarea>
+                        <input class="form-control has-text-centered" type="text" id="new_burger" required value=""
+                            name="burger_name" placeholder='Enter a burger to create'>
                     </div>
 
                     <br>
@@ -53,6 +54,7 @@
     </header>
 
     {{{ body }}}
+
 </body>
 
 </html>

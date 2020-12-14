@@ -4,6 +4,7 @@
 /* All elements selected */
 body {
     background-color: red;
+    height: 100%;
 }
 
 /* Hamburger image */
@@ -21,7 +22,6 @@ body {
     font-size: 25px;
     width: auto;
     color: rgb(246, 204, 18);
-
 }
 
 /* Title */
